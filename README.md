@@ -1,3 +1,7 @@
+## 🎮 Gameplay Preview
+
+![Gameplay Demo](assets/demo.gif)
+
 # Breakout Game
 
 A classic Breakout (Arkanoid-style) game implemented in Python using Pygame.
