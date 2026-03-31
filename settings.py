@@ -1,9 +1,9 @@
 # settings.py - Game constants and configuration
-
+import os
 import pygame
 
 # Screen settings
-SCREEN_WIDTH = 800
+SCREEN_WIDTH = 810
 SCREEN_HEIGHT = 600
 FPS = 60
 
@@ -46,10 +46,15 @@ FONT_SIZE = 36
 SMALL_FONT_SIZE = 24
 
 # Sound settings
-SOUND_VOLUME = 0.5  # 0.0 to 1.0
-PADDLE_SOUND = "assets/sounds/paddle.wav"
-WALL_SOUND = "assets/sounds/wall.wav"
-BRICK_SOUND = "assets/sounds/brick.wav"
+SOUND_VOLUME = 1.0  # 0.0 to 1.0
+
+# Base directory (location of this settings.py file)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Absolute sound paths
+PADDLE_SOUND = os.path.join(BASE_DIR, "assets", "sounds", "paddle.wav")
+WALL_SOUND   = os.path.join(BASE_DIR, "assets", "sounds", "wall.wav")
+BRICK_SOUND  = os.path.join(BASE_DIR, "assets", "sounds", "brick.wav")
 
 # Screen shake settings
 SHAKE_INTENSITY = 3  # pixels
