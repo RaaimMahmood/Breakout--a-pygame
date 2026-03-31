@@ -4,11 +4,11 @@ import pygame
 from settings import *
 
 class Brick:
-    def __init__(self, x, y, color, hp):
+    def __init__(self, x, y, width, height, color, hp):
         self.x = x
         self.y = y
-        self.width = BRICK_WIDTH
-        self.height = BRICK_HEIGHT
+        self.width = width
+        self.height = height
         self.color = color
         self.hp = hp
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)

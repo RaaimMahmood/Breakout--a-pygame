@@ -4,9 +4,11 @@ import pygame
 from settings import *
 
 class Ball:
-    def __init__(self, x, y):
+    def __init__(self, x, y, screen_width, screen_height):
         self.x = x
         self.y = y
+        self.screen_width = screen_width
+        self.screen_height = screen_height
         self.radius = BALL_RADIUS
         self.speed_x = BALL_SPEED_X
         self.speed_y = BALL_SPEED_Y
@@ -20,7 +22,7 @@ class Ball:
         bounced = False
 
         # Bounce off left and right walls
-        if self.rect.left <= 0 or self.rect.right >= SCREEN_WIDTH:
+        if self.rect.left <= 0 or self.rect.right >= self.screen_width:
             self.speed_x = -self.speed_x
             bounced = True
 

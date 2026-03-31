@@ -2,9 +2,9 @@
 import os
 import pygame
 
-# Screen settings
-SCREEN_WIDTH = 810
-SCREEN_HEIGHT = 600
+# Screen settings (will be set dynamically in main.py)
+SCREEN_WIDTH = None
+SCREEN_HEIGHT = None
 FPS = 60
 
 # Colors (RGB)
@@ -36,6 +36,11 @@ BRICK_ROWS = 6
 BRICK_COLS = 10
 BRICK_COLORS = [RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE]
 BRICK_HP = [1, 1, 2, 2, 3, 3]  # Hit points for each row
+
+# Brick layout settings
+BRICK_PADDING = 5
+SIDE_MARGIN = 35
+TOP_MARGIN = 50
 
 # Game settings
 SCORE_PER_BRICK = 10
